@@ -67,6 +67,14 @@ angular-aria@^1.6.6:
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/angular-aria/-/angular-aria-1.6.6.tgz#58dd748e09564bc8409f739bde57b35fbee5b6a5"
 
+angular-material-data-table@^0.10.10:
+  version "0.10.10"
+  resolved "https://registry.yarnpkg.com/angular-material-data-table/-/angular-material-data-table-0.10.10.tgz#229b402745ec1a146f07da8d1e526be6540849ee"
+
+angular-material@1.0.x:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/angular-material/-/angular-material-1.0.9.tgz#00e816f6381ffd164bc7e56dcf56549f0ff64d6c"
+
 angular-material@1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/angular-material/-/angular-material-1.1.5.tgz#a5450cd8205e15a7691edc389476094cf86d592b"
@@ -74,6 +82,10 @@ angular-material@1.1.5:
 angular-route@^1.6.6:
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/angular-route/-/angular-route-1.6.6.tgz#8c11748aa195c717b1b615a7e746442bfc7c61f4"
+
+angular@1.5.x:
+  version "1.5.11"
+  resolved "https://registry.yarnpkg.com/angular/-/angular-1.5.11.tgz#8c5ba7386f15965c9acf3429f6881553aada30d6"
 
 angular@^1.6.6:
   version "1.6.6"
@@ -1823,12 +1835,6 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-"git@github.com:soulhave/simpleGridMaterial.git@^1.0.2":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/git/-/git-0.1.5.tgz#9ef62df93f851c27542143bf52d1c68b1017ca15"
-  dependencies:
-    mime "1.2.9"
-
 glob-base@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/glob-base/-/glob-base-0.3.0.tgz#dbb164f6221b1c0b1ccf82aea328b497df0ea3c4"
@@ -2610,10 +2616,6 @@ mime-types@^2.1.12, mime-types@~2.1.15, mime-types@~2.1.16, mime-types@~2.1.17, 
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.17.tgz#09d7a393f03e995a79f8af857b70a9e0ab16557a"
   dependencies:
     mime-db "~1.30.0"
-
-mime@1.2.9:
-  version "1.2.9"
-  resolved "https://registry.yarnpkg.com/mime/-/mime-1.2.9.tgz#009cd40867bd35de521b3b966f04e2f8d4d13d09"
 
 mime@1.4.1, mime@^1.3.4:
   version "1.4.1"
@@ -3717,6 +3719,13 @@ shebang-regex@^1.0.0:
 signal-exit@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
+
+"simple-grid-material@git+https://github.com/soulhave/simpleGridMaterial.git":
+  version "1.0.2"
+  resolved "git+https://github.com/soulhave/simpleGridMaterial.git#357b003a340349115696d2a2591897019506f3ba"
+  dependencies:
+    angular "1.5.x"
+    angular-material "1.0.x"
 
 slash@^1.0.0:
   version "1.0.0"
