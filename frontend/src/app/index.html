@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Webpack</title>
+</head>
+
+<body ng-app="financeApp">
+    <md-toolbar class="md-theme-indigo">
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" aria-label="Settings">
+                <md-icon md-svg-icon="assets/images/menu_white.svg"></md-icon>
+            </md-button>
+            <h2 flex md-truncate>Manager Finance</h2>
+        </div>
+    </md-toolbar>
+    <md-content class="md-padding" flex>
+        <div ng-view class="view-animate"></div>
+    </md-content>
+    <div ng-controller="HomeCtrl as ctrl">
+        <md-fab-speed-dial md-open="ctrl.isOpen" md-direction="up" class="md-scale md-fab-bottom-right" ng-mouseenter="ctrl.isOpen=true" ng-mouseleave="ctrl.isOpen=false">
+            <md-fab-trigger>
+                <md-button aria-label="menu" class="md-fab md-warn">
+                    <md-icon md-svg-src="assets/images/money_white_24px.svg"></md-icon>
+                </md-button>
+            </md-fab-trigger>
+            <md-fab-actions>
+                <md-button aria-label="Wallet" class="md-fab md-raised md-mini">
+                    <md-icon md-svg-src="assets/images/wallet_black-18px.svg" aria-label="Wallet"></md-icon>
+                </md-button>
+                <md-button aria-label="Balance" class="md-fab md-raised md-mini">
+                    <md-icon md-svg-src="assets/images/account_black-18px.svg" aria-label="Balance"></md-icon>
+                </md-button>
+            </md-fab-actions>
+        </md-fab-speed-dial>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+
+</html>

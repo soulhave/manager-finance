@@ -1,0 +1,7 @@
+.app-finance-value {
+    text-align: right;
+    font-weight: bold;
+}
+.app-finance-value-negative {
+    color: red;
+}

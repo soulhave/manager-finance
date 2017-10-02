@@ -1,0 +1,31 @@
+<div layout="row" layout-align="center center" flex>
+  <!-- Change to another include-->
+  <md-card flex="100">
+    <md-card-content>
+      <form>
+        <simple-grid ng-data-ctrl="ctrl" ng-data-list="listEntries" ng-data-pagination="false">
+          <header>
+            <column data-style="width: 5%;">Bank</column>
+            <column data-style="width: 5%;">Date</column>
+            <column data-style="width: 65%;">Description</column>
+            <column data-style="width: 15%;">Type</column>
+            <column data-style="width: 10%;">Value</column>
+          </header>
+          <list>
+            <column>
+              <img ng-src="./assets/images/{{$ctrl.getImage($line.bank)}}" alt="$line.bank">
+            </column>
+            <column data-bind="date"></column>
+            <column data-bind="description"></column>
+            <column data-bind="type"></column>
+            <column>
+              <div class="app-finance-value" ng-class="{'app-finance-value-negative': $ctrl.isNegative($line.value)}">
+                {{$line.value | currency:"R$ ":2}}
+              </div>
+            </column>
+          </list>
+        </simple-grid>
+      </form>
+    </md-card-content>
+  </md-card>
+</div>
