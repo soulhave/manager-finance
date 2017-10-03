@@ -4,19 +4,32 @@
     <title>Webpack</title>
 </head>
 
-<body ng-app="financeApp">
+<body ng-app="financeApp" ng-controller="HomeCtrl as ctrl" ng-cloak>
     <md-toolbar class="md-theme-indigo">
         <div class="md-toolbar-tools">
-            <md-button class="md-icon-button" aria-label="Settings">
+            <md-button class="md-icon-button" aria-label="Settings" ng-click="ctrl.buildToggler()">
                 <md-icon md-svg-icon="assets/images/menu_white.svg"></md-icon>
             </md-button>
             <h2 flex md-truncate>Manager Finance</h2>
         </div>
     </md-toolbar>
-    <md-content class="md-padding" flex>
-        <div ng-view class="view-animate"></div>
-    </md-content>
-    <div ng-controller="HomeCtrl as ctrl">
+    <section layout="row" class="app-size-full" flex>
+        <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="1">
+            <md-content layout-padding>
+                <md-button ng-click="ctrl.close()" class="md-primary" hide-gt-md>
+                    Close Sidenav Left
+                </md-button>
+                <p hide show-gt-md>
+                    This sidenav is locked open on your device. To go back to the default behavior, narrow your display.
+                </p>
+            </md-content>
+        </md-sidenav>
+        <md-content flex layout-padding>
+            <div ng-view class="view-animate"></div>
+        </md-content>
+    </section>
+
+    <div>
         <md-fab-speed-dial md-open="ctrl.isOpen" md-direction="up" class="md-scale md-fab-bottom-right" ng-mouseenter="ctrl.isOpen=true" ng-mouseleave="ctrl.isOpen=false">
             <md-fab-trigger>
                 <md-button aria-label="menu" class="md-fab md-warn">

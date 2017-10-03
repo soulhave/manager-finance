@@ -1,5 +1,4 @@
 var angular = require('angular');
-require('angular-route');
 require('angular-aria');
 require('angular-animate');
 require('angular-material/angular-material.css');
