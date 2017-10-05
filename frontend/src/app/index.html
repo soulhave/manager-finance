@@ -2,9 +2,10 @@
 
 <head>
     <title>Webpack</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body ng-app="financeApp" ng-controller="HomeCtrl as ctrl" ng-cloak>
+<body ng-app="financeApp" ng-controller="HomeCtrl as ctrl">
     <md-toolbar class="md-theme-indigo">
         <div class="md-toolbar-tools">
             <md-button class="md-icon-button" aria-label="Settings" ng-click="ctrl.buildToggler()">
@@ -14,15 +15,24 @@
         </div>
     </md-toolbar>
     <section layout="row" class="app-size-full" flex>
-        <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="1">
-            <md-content layout-padding>
-                <md-button ng-click="ctrl.close()" class="md-primary" hide-gt-md>
-                    Close Sidenav Left
-                </md-button>
-                <p hide show-gt-md>
-                    This sidenav is locked open on your device. To go back to the default behavior, narrow your display.
-                </p>
-            </md-content>
+        <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="1" ng-cloak>
+            <div ng-show="ctrl.isSmall()">
+                <md-toolbar class="md-theme-indigo">
+                    <div class="md-toolbar-tools">
+                        <h1 flex md-truncate>Manager Finance</h1>
+                    </div>
+                </md-toolbar>
+            </div>
+
+            <md-sidemenu>
+                <md-sidemenu-button ng-click="ctrl.go('')">
+                    <md-icon class="menu-icon">home</md-icon>Home</md-sidemenu-button>
+                <md-sidemenu-button ng-click="ctrl.go('entrie')">
+                    <md-icon class="menu-icon">account_balance_wallet</md-icon> Bank Control</md-sidemenu-button>
+                <md-sidemenu-button href="#">
+                    <md-icon class="menu-icon">account_balance</md-icon> Financial Control</md-sidemenu-button>
+                </md-sidemenu-group>
+            </md-sidemenu>
         </md-sidenav>
         <md-content flex layout-padding>
             <div ng-view class="view-animate"></div>
@@ -47,6 +57,10 @@
         </md-fab-speed-dial>
     </div>
     <script src="bundle.js"></script>
+    <div ng-show="!ctrl.loading" class="main-loading" layout="column" layout-align="center center" ng-show="ctrl.loading">
+            <md-progress-circular md-mode="indeterminate" md-diameter="50"></md-progress-circular>
+    </div>        
 </body>
+ 
 
 </html>

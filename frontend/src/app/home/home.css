@@ -1,0 +1,30 @@
+.app-size-full {
+    height: 100%;
+}
+
+.menu-icon {
+    margin-left: 0px;
+}
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+    display: none !important;
+}
+
+.main-loading {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #fff;
+  
+    &.ng-leave-active {
+      opacity: 0;
+    }
+  }
