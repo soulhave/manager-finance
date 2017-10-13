@@ -4,7 +4,8 @@
   "description": "Finance Module",
   "main": "index.js",
   "scripts": {
-    "start": "node node_modules/webpack-dev-server/bin/webpack-dev-server --content-base static/ --inline"
+    "start": "node node_modules/webpack-dev-server/bin/webpack-dev-server --content-base static/ --inline",
+    "api": "json-server --watch db.json --port 3004"
   },
   "author": "",
   "license": "ISC",
