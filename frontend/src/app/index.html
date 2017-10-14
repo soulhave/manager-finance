@@ -23,7 +23,6 @@
                     </div>
                 </md-toolbar>
             </div>
-
             <md-sidemenu>
                 <md-sidemenu-button ng-click="ctrl.go('')">
                     <md-icon class="menu-icon">home</md-icon>Home</md-sidemenu-button>
@@ -39,28 +38,13 @@
         </md-content>
     </section>
 
-    <div>
-        <md-fab-speed-dial md-open="ctrl.isOpen" md-direction="up" class="md-scale md-fab-bottom-right" ng-mouseenter="ctrl.isOpen=true" ng-mouseleave="ctrl.isOpen=false">
-            <md-fab-trigger>
-                <md-button aria-label="menu" class="md-fab md-warn">
-                    <md-icon md-svg-src="assets/images/money_white_24px.svg"></md-icon>
-                </md-button>
-            </md-fab-trigger>
-            <md-fab-actions>
-                <md-button aria-label="Wallet" class="md-fab md-raised md-mini">
-                    <md-icon md-svg-src="assets/images/wallet_black-18px.svg" aria-label="Wallet"></md-icon>
-                </md-button>
-                <md-button aria-label="Balance" class="md-fab md-raised md-mini">
-                    <md-icon md-svg-src="assets/images/account_black-18px.svg" aria-label="Balance"></md-icon>
-                </md-button>
-            </md-fab-actions>
-        </md-fab-speed-dial>
+    <div ng-include="'fab-button.html'">
     </div>
     <script src="bundle.js"></script>
     <div ng-show="!ctrl.loading" class="main-loading" layout="column" layout-align="center center" ng-show="ctrl.loading">
-            <md-progress-circular md-mode="indeterminate" md-diameter="50"></md-progress-circular>
-    </div>        
+        <md-progress-circular md-mode="indeterminate" md-diameter="50"></md-progress-circular>
+    </div>
 </body>
- 
+
 
 </html>
